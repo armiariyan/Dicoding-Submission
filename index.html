@@ -6,42 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kucing</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header id="home">
+        <nav id="navbar">
             <ul id="menu-list">
-                <li><a href="">Home</a></li>
-                <li><a href="">Generate</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#faktaUnik">Fakta</a></li>
+                <li><a href="#about">Tentang Penulis</a></li>
             </ul>
         </nav>
         <div id="banner" class="text-center">
-            <h1>Kucing.</h1>
+            <h1 id="judul"></h1>
         </div>
     </header>
+    <main>
+        <div id="content">
+            <div class="flex-container">
+                <article class="card" id="sejarah">
+                    <h2 class="mb">Sejarah</h2>
+                    <p>
+                        Kucing (nama ilmiah: Felis silvestris catus
+                        atau Felis catus) adalah sejenis mamalia karnivora dari keluarga Felidae. Kata "kucing" biasanya
+                        merujuk kepada "kucing" yang telah dijinakkan, tetapi bisa juga merujuk kepada "kucing besar"
+                        seperti singa dan harimau.
+                        Kucing telah berbaur dengan kehidupan manusia paling tidak sejak 6.000 tahun SM, dari kerangka
+                        kucing di Pulau Siprus. Orang Mesir Kuno dari 3.500 SM telah menggunakan kucing untuk menjauhkan
+                        tikus atau hewan pengerat lain dari lumbung yang menyimpan hasil panen
+                        <br><br>
+                        Saat ini, kucing adalah salah satu hewan peliharaan terpopuler di dunia. Kucing yang garis
+                        keturunannya tercatat secara resmi sebagai kucing trah atau galur murni (pure breed), seperti
+                        persia, siam, manx, dan sphinx. Kucing seperti ini biasanya dibiakkan di tempat pemeliharaan
+                        hewan resmi. Jumlah kucing ras hanyalah 1% dari seluruh kucing di dunia, sisanya adalah kucing
+                        dengan keturunan campuran seperti kucing liar atau kucing kampung.
+                    </p>
+                    <p class="mt">Source : <a href="https://id.wikipedia.org/wiki/Kucing"
+                            target="__blank">id.wikipedia.org/wiki/Kucing</a></p>
+                </article>
+                <article class="card" id="faktaUnik">
+                    <h2 class="mb">Fakta Unik</h2>
+                    <p class="mb">Pilih berapa fakta unik Kucing yang ingin ditampilkan :</p>
+                    <button id="unik3" class="btn-unik" onclick="generateFakta(3)">3</button>
+                    <button id="unik6" class="btn-unik" onclick="generateFakta(6)">6</button>
+                    <button id="unik9" class="btn-unik" onclick="generateFakta(9)">9</button>
+                    <div class="mb" id="batasFakta">
 
 
+                    </div>
 
+                </article>
+                <article class="card text-center" id="fotoKucing">
+                    <h2 class="mb">Tekan Gambar Untuk Merubahnya Secara Acak</h2>
+                    <a onclick="generateImage()">
+                        <img src="assets/images/cat1.jpg" alt="" id="catImage">
+                    </a>
+                </article>
 
+                <aside class="card" id="about">
+                    <div class="container-about">
+                        <img src="assets/images/foto.png" alt="" id="fotoProfil">
+                        <div class="container-biodata">
+                            <h3>Armia Riyan Setya</h3>
+                            <h4 style="font-weight: 400;">Mahasiswa Universitas Trisakti angkatan 2018 Jurusan Teknik
+                                Informatika.
+                            </h4>
+                            <button class="btn-contact">
+                                <a href="mailto:akunarmia@gmail.com" target="_blank">
+                                    Email Me
+                                </a>
+                            </button>
 
+                        </div>
 
+                    </div>
+                </aside>
+            </div>
 
+        </div>
+    </main>
 
+    <footer>
+        <p>Armia Riyan Setya &copy; Submission Dicoding</p>
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
+    <script>
+        let typed = new Typed('#judul', {
+            strings: ["Kucing.", "Cat.", "ネコ (Neko).", "Кот.", "El Gato.", "Katze.",
+                "แมว (Mæw)."
+            ],
+            typeSpeed: 60,
+            loop: true
+        });
+    </script>
     <script src="assets/scripts/script.js"></script>
 </body>
 
